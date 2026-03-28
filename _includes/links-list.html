@@ -1,0 +1,12 @@
+{%- for post in site.tags[include.tag] -%}
+  <p>
+    {%- if post.layout == "episode" -%}
+      PODCAST
+    {%- elsif post.layout == "map" -%}
+      MAP
+    {%- else -%}
+      POST
+    {%- endif -%}
+    &nbsp;<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </p>
+{%- endfor -%}

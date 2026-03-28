@@ -1,0 +1,12 @@
+{% for guest_name in page.guests %}
+  {% assign guest = site.guests | where_exp: "item", "item.id contains guest_name" | first %}
+  <h2>本集來賓：{{guest.title}} {{guest.subtitle}}</h2>
+  <p><img src="{{guest.image}}" alt="{{guest.title}}" style="width: 200px; height: auto;"></p>
+  <h3>
+    {% if guest.website %}<a href="{{ guest.website }}"><span class="icon">{% include icon-website.svg %}</span></a>{% endif %}
+    {% if guest.facebook %}<a href="{{ guest.facebook }}"><span class="icon">{% include icon-facebook.svg %}</span></a>{% endif %}
+    {% if guest.instagram %}<a href="{{ guest.instagram }}"><span class="icon">{% include icon-instagram.svg %}</span></a>{% endif %}
+    {% if guest.youtube %}<a href="{{ guest.youtube }}"><span class="icon">{% include icon-youtube.svg %}</span></a>{% endif %}
+  </h3>
+  <p>{{guest.content | markdownify}}</p>
+{% endfor %}

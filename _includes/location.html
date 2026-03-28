@@ -1,0 +1,24 @@
+<p>
+  <gmp-map
+    center="41.027748173921374, -92.41852445367961"
+    zoom="4"
+    map-id="e44e2237b70f9e7ffd1f6f62"
+    style="height: 400px">
+    <gmp-advanced-marker position="41.027748173921374, -92.41852445367961" gmp-clickable></gmp-advanced-marker>
+  </gmp-map>
+</p>
+
+<script>
+  document.addEventListener('gmp-click', async (e) => {
+    const { InfoWindow } = await google.maps.importLibrary("maps");
+    const infoWindow = new InfoWindow({
+      content: `<h3>{{page.title}}</h3>`
+    });
+    infoWindow.open({ anchor: e.target });
+  });
+</script>
+
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1a5Qt70mQ9GzIX6uSgvLHHHeo6l4uLoo&libraries=maps,marker"
+    defer
+></script>

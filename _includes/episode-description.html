@@ -1,0 +1,27 @@
+{{episode.content | markdownify}}
+
+{% if episode.guests.size > 0 %}
+<p>🎙️ 來賓簡介：<br>
+{% for guest_name in episode.guests %}
+  {% assign guest = site.guests | where_exp: "item", "item.id contains guest_name" | first %}
+  {{guest.content}}
+  {% if guest.website %}<br>網站 <a href="{{guest.website}}">{{guest.website}}</a>{% endif %}
+  {% if guest.facebook %}<br>Facebook <a href="{{guest.facebook}}">{{guest.facebook}}</a>{% endif %}
+  {% if guest.instagram %}<br>Instagram <a href="{{guest.instagram}}">{{guest.instagram}}</a>{% endif %}
+  {% if guest.youtube %}<br>Youtube <a href="{{guest.youtube}}">{{guest.youtube}}</a>{% endif %}
+{% endfor %}
+</p>
+{% endif %}
+
+<p>✅ 本集重點：
+  <ul>
+    {% for point in episode.timeline %}
+    <li>({{point.time | replace: ' ', ''}}) {{point.text}}</li>
+    {% endfor %}
+  </ul>
+</p>
+{{timeline}}
+
+{% assign padded_id = episode.episode | append: '' | prepend: '000' | slice: -3, 3 %}
+{% if episode.episode %}Show note <a href="https://ltsoj.com/podcast-ep{{padded_id}}">https://ltsoj.com/podcast-ep{{padded_id}}</a><br>{% endif %}
+{% include contact.html %}
