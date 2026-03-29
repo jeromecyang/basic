@@ -1,11 +1,14 @@
 <p>
-  <gmp-map center="0,0" zoom="2" map-id="e44e2237b70f9e7ffd1f6f62" style="height: 400px">
-  {% for location in site.data.locations %}
-    {% if page.locations contains location.location %}
-      <gmp-advanced-marker position="{{ location.lat }}, {{ location.lon }}" data-name="{{ location.zh-tw }} {{ location.en }}" gmp-clickable></gmp-advanced-marker>
-    {% endif %}
-  {% endfor %}
-  </gmp-map>
+  {% assign first_location = site.data.locations | where_exp: "item", "page.locations contains item.location" | first %}
+  {% if first_location %}
+    <gmp-map center="{{ first_location.lat }}, {{ first_location.lon }}" zoom="4" map-id="e44e2237b70f9e7ffd1f6f62" style="height: 400px">
+    {% for location in site.data.locations %}
+      {% if page.locations contains location.location %}
+        <gmp-advanced-marker position="{{ location.lat }}, {{ location.lon }}" data-name="{{ location.zh-tw }} {{ location.en }}" gmp-clickable></gmp-advanced-marker>
+      {% endif %}
+    {% endfor %}
+    </gmp-map>
+  {% endif %}
 </p>
 
 <script>

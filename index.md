@@ -20,7 +20,8 @@ actions:
 
 <div class="entries-grid">
   {% assign latest_episodes = site.posts | where: "layout", "episode" %}
-  {% for post in latest_episodes limit:4 %}
+  {% for post in latest_episodes limit:2 %}
     {% include entry.html %}
   {% endfor %}
 </div>
+  
