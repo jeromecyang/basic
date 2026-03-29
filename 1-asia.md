@@ -4,6 +4,9 @@ title: 亞洲太平洋
 permalink: /asia/
 ---
 
+{% assign regions = "Northeast Asia,Southeast Asia,South Asia,Central Asia,Oceania" | split: "," %}
+{% include area-map.html regions=regions center="30,120" %}
+
 ## 東北亞
 
 {% include links-list.html tag="Northeast Asia" %}
