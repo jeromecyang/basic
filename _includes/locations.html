@@ -1,0 +1,21 @@
+<p>
+  <gmp-map center="0,0" zoom="2" map-id="e44e2237b70f9e7ffd1f6f62" style="height: 400px">
+  {% for location in site.data.locations %}
+    {% if page.locations contains location.location %}
+      <gmp-advanced-marker position="{{ location.lat }}, {{ location.lon }}" data-name="{{ location.zh-tw }} {{ location.en }}" gmp-clickable></gmp-advanced-marker>
+    {% endif %}
+  {% endfor %}
+  </gmp-map>
+</p>
+
+<script>
+  document.addEventListener('gmp-click', async (e) => {
+    const { InfoWindow } = await google.maps.importLibrary("maps");
+    const infoWindow = new InfoWindow({
+      content: `<h3>${e.target.dataset.name}</h3>`
+    });
+    infoWindow.open({ anchor: e.target });
+  });
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1a5Qt70mQ9GzIX6uSgvLHHHeo6l4uLoo&libraries=maps,marker" defer></script>
