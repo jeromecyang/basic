@@ -1,0 +1,16 @@
+---
+---
+@import "basically-basic";
+
+.intro-image {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #dddddd;
+
+  img {
+    max-width: 1200px;
+  }
+}

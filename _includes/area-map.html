@@ -1,23 +1,44 @@
 <p>
   <gmp-map center="{{ include.center }}" zoom="2" map-id="e44e2237b70f9e7ffd1f6f62" style="height: 400px">
-  {% for region in include.regions %}
-    {% for post in site.tags[region] %}
-      {% for location in site.data.locations %}
+  {% for location in site.data.locations %}
+    {% assign location_posts = "" | split: "|" %}
+    {% for region in include.regions %}
+      {% for post in site.tags[region] %}
         {% if post.locations contains location.location %}
-          <gmp-advanced-marker position="{{ location.lat }}, {{ location.lon }}" data-name="{{ location.zh-tw }} {{ location.en }}" gmp-clickable></gmp-advanced-marker>
+          {% assign location_posts = location_posts | push: post %}
         {% endif %}
       {% endfor %}
     {% endfor %}
+    {% if location_posts.size > 0 %}
+      <gmp-advanced-marker
+        position="{{ location.lat }}, {{ location.lon }}"
+        data-name="{{ location.zh-tw }} {{ location.en }}"
+        data-items="{{ location_posts | map: 'title' | join: '$' }}"
+        data-links="{{ location_posts | map: 'url' | join: '$' }}"
+        gmp-clickable></gmp-advanced-marker>
+    {% endif %}
   {% endfor %}
   </gmp-map>
 </p>
 
 <script>
+  let infoWindow; // 1. Declare a persistent variable outside the listener
+
   document.addEventListener('gmp-click', async (e) => {
     const { InfoWindow } = await google.maps.importLibrary("maps");
-    const infoWindow = new InfoWindow({
-      content: `<h3>${e.target.dataset.name}</h3>`
-    });
+
+    // 2. Create the InfoWindow only if it doesn't exist yet
+    if (!infoWindow) {
+      infoWindow = new InfoWindow();
+    }
+
+    const titles = e.target.dataset.items.split('$');
+    const links = e.target.dataset.links.split('$')
+      .map((link, index) => `<a href="${link}">${titles[index]}</a>`)
+      .join('<br>');
+
+    // 3. Update the existing window with new content and open it on the new anchor
+    infoWindow.setContent(`<h3>${e.target.dataset.name}</h3><p>${links}</p>`);
     infoWindow.open({ anchor: e.target });
   });
 </script>
