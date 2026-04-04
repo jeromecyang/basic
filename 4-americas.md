@@ -5,7 +5,7 @@ permalink: /americas/
 ---
 
 {% assign regions = "US Northeast,US South,US Midwest,US West,Alaska,North America,Caribbean,Central America,South America" | split: "," %}
-{% include area-map.html regions=regions center="0,-90" %}
+{% include area-map.html regions=regions center="30,-90" %}
 
 ## 美國東北部
 

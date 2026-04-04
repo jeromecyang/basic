@@ -5,7 +5,7 @@ permalink: /europe/
 ---
 
 {% assign regions = "Northern Europe,Western Europe,Central Europe,Eastern Europe,Southeastern Europe,Southern Europe,Caucasus,Middle East" | split: "," %}
-{% include area-map.html regions=regions center="40,20" %}
+{% include area-map.html regions=regions center="50,30" zoom="3" %}
 
 ## 北歐
 

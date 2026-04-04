@@ -1,11 +1,11 @@
 <p>
-  <gmp-map center="{{ include.center }}" zoom="2" map-id="e44e2237b70f9e7ffd1f6f62" style="height: 400px">
+  <gmp-map center="{{ include.center }}" zoom="{{ include.zoom | default: 2 }}" map-id="e44e2237b70f9e7ffd1f6f62" style="height: 400px">
   {% for location in site.data.locations %}
     {% assign location_posts = "" | split: "|" %}
     {% for region in include.regions %}
       {% for post in site.tags[region] %}
         {% if post.locations contains location.location %}
-          {% assign location_posts = location_posts | push: post %}
+          {% assign location_posts = location_posts | push: post | uniq %}
         {% endif %}
       {% endfor %}
     {% endfor %}

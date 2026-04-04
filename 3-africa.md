@@ -5,7 +5,7 @@ permalink: /africa/
 ---
 
 {% assign regions = "North Africa,West Africa,East Africa,Southern Africa" | split: "," %}
-{% include area-map.html regions=regions center="0,0" %}
+{% include area-map.html regions=regions center="0,20" zoom="3" %}
 
 ## 北非
 
