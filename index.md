@@ -12,6 +12,12 @@ actions:
   - label: "Youtube"
     icon: youtube
     url: "https://www.youtube.com/@travelwok"
+  - label: "Facebook"
+    icon: facebook
+    url: "https://facebook.com/travel.wok"
+  - label: "Instagram"
+    icon: instagram
+    url: "https://instragram.com/travel.wok"
 ---
 
 《旅行熱炒店：世界地理人文探索頻道》是一個從旅行經驗出發的PODCAST節目。我們不只分享旅行故事，更重要的是：透過旅行經驗去認識各地的地理、歷史、人文與社會議題。
@@ -24,4 +30,9 @@ actions:
     {% include entry.html %}
   {% endfor %}
 </div>
+
+# 地圖索引
+
+{% assign regions = "Northeast Asia,Southeast Asia,South Asia,Central Asia,Oceania,Northern Europe,Western Europe,Central Europe,Eastern Europe,Southeastern Europe,Southern Europe,Caucasus,Middle East,North Africa,West Africa,East Africa,Southern Africa,US Northeast,US South,US Midwest,US West,Alaska,North America,Caribbean,Central America,South America" | split: "," %}
+{% include area-map.html regions=regions center="30,0" %}
   
