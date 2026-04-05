@@ -17,7 +17,7 @@ actions:
     url: "https://facebook.com/travel.wok"
   - label: "Instagram"
     icon: instagram
-    url: "https://instragram.com/travel.wok"
+    url: "https://instagram.com/travel.wok"
 ---
 
 《旅行熱炒店：世界地理人文探索頻道》是一個從旅行經驗出發的PODCAST節目。我們不只分享旅行故事，更重要的是：透過旅行經驗去認識各地的地理、歷史、人文與社會議題。
