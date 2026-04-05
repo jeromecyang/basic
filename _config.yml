@@ -20,11 +20,12 @@
 
 lang: en-US
 title: 旅行熱炒店：世界地理人文探索頻道
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+email: travel.wok@ltsoj.com
+author: Jerome Yang
+website: https://ltsoj.com/
+subtitle: 探索世界地理人文的知識型旅行節目 by Jerome Yang
+description: ""
+thumbnail: https://i.imgur.com/BZpD6XW.jpg
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
