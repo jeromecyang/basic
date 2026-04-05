@@ -1,12 +1,19 @@
 {%- for post in site.tags[include.tag] -%}
   <p>
     {%- if post.layout == "episode" -%}
-      PODCAST
+      <span style="font-size: smaller; color: #fff; background: #da6f41; border-radius: 8px;">
+        &nbsp;PODCAST&nbsp;
+      </span>
     {%- elsif post.layout == "map" -%}
-      MAP
+      <span style="font-size: smaller; color: #fff; background: #be2596; border-radius: 8px;">
+        &nbsp;MAP&nbsp;
+      </span>
     {%- else -%}
-      POST
+      <span style="font-size: smaller; color: #fff; background: #00838a; border-radius: 8px;">
+        &nbsp;POST&nbsp;
+      </span>
     {%- endif -%}
-    &nbsp;<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    &nbsp;
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
   </p>
 {%- endfor -%}

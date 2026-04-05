@@ -4,7 +4,6 @@ title: 米國放大鏡系列單集索引
 layout: post
 permalink: 2025/07/22/us-magnifier
 image: https://i.imgur.com/O3Fakf5.png
-featured: true
 ---
 米國放大鏡系列，每集介紹1-2個州，帶你走遍美國！將近一年的連載已經接近完成，在這裡提供單集索引，方便大家查閱！
 

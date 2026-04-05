@@ -12,6 +12,7 @@ tags:
 - Travel
 permalink: 2019/07/14/georgia-tbilisi
 image: https://cdn-images-1.medium.com/max/800/0*GuFPHsstn1uUDinz
+featured: true
 ---
 
 ![](https://cdn-images-1.medium.com/max/800/0*GuFPHsstn1uUDinz)

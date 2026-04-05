@@ -5,7 +5,6 @@ title: 旅行熱炒店誠徵來賓（2024年企劃）
 layout: post
 permalink: 2024/01/24/guests-wanted
 image: https://cdn-icons-png.flaticon.com/512/9242/9242134.png
-featured: true
 excerpt: 旅行熱炒店限時開放報名上節目！2024年，我們想尋找怎樣的來賓呢？
 ---
 ![](https://cdn-icons-png.flaticon.com/512/9242/9242134.png)
