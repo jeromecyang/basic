@@ -98,8 +98,8 @@
     location: greenland
     zh-tw: 格陵蘭
     en: Greenland
-    lat: 43.0361995
-    lon: -70.8328322
+    lat: 72
+    lon: -40
 -
     location: washington-usa
     zh-tw: 華盛頓州
@@ -215,8 +215,8 @@
     lat: 37.1232245
     lon: -78.4927721
 -
-    location: new-hempshire-usa
-    zh-tw: 新罕布夏州
+    location: new-york
+    zh-tw: 紐約市
     en: New York
     lat: 40.68295
     lon: -73.9708
@@ -451,7 +451,7 @@
 -
     location: new-york-state-usa
     zh-tw: 紐約州
-    en: New York
+    en: New York State
     lat: 43.1561681
     lon: -75.8449946
 -
@@ -618,8 +618,8 @@
     lon: 7.4197576
 -
     location: new-york
-    zh-tw: 紐約
-    en: New York
+    zh-tw: 紐約市
+    en: New York City
     lat: 43.1561681
     lon: -75.8449946
 -
