@@ -1058,8 +1058,8 @@
     location: sarajevo
     zh-tw: 塞拉耶佛
     en: Sarajevo
-    lat: 37.287287
-    lon: 14.0803707
+    lat: 43.856389
+    lon: 18.413056
 -
     location: paraguay
     zh-tw: 巴拉圭
@@ -1112,8 +1112,8 @@
     location: democratic-republic-of-congo
     zh-tw: 剛果民主共和國
     en: Democratic Republic Of Congo
-    lat: -15.4139213
-    lon: 28.289698
+    lat: -3
+    lon: 21
 -
     location: uganda
     zh-tw: 烏干達
@@ -1130,8 +1130,8 @@
     location: crimea
     zh-tw: 克里米亞
     en: Crimea
-    lat: 45.3228492
-    lon: 14.4620949
+    lat: 45.3
+    lon: 34.4
 -
     location: georgia
     zh-tw: 喬治亞
