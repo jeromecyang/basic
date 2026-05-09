@@ -2,6 +2,7 @@
 layout: page
 title: 歐洲西亞
 permalink: /europe/
+image: https://i.imgur.com/V4p2j7a.png
 ---
 
 {% assign regions = "Northern Europe,Western Europe,Central Europe,Eastern Europe,Southeastern Europe,Southern Europe,Caucasus,Middle East" | split: "," %}

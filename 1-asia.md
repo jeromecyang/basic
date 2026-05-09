@@ -2,6 +2,7 @@
 layout: collection
 title: 亞洲太平洋
 permalink: /asia/
+image: https://i.imgur.com/TyHKEk5.png
 ---
 
 {% assign regions = "Northeast Asia,Southeast Asia,South Asia,Central Asia,Oceania" | split: "," %}

@@ -2,6 +2,7 @@
 layout: page
 title: 關於節目
 permalink: /about/
+image: https://i.imgur.com/nkdJSHK.png
 ---
 
 《旅行熱炒店：世界地理人文探索頻道》是一個從旅行經驗出發的PODCAST節目。我們不只分享旅行故事，更重要的是：透過旅行經驗去認識各地的地理、歷史、人文與社會議題。

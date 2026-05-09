@@ -2,6 +2,7 @@
 layout: page
 title: 美洲
 permalink: /americas/
+image: https://i.imgur.com/W8tsGzz.png
 ---
 
 {% assign regions = "US Northeast,US South,US Midwest,US West,Alaska,North America,Caribbean,Central America,South America" | split: "," %}

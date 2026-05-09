@@ -20,7 +20,9 @@ actions:
     url: "https://instagram.com/travel.wok"
 ---
 
-《旅行熱炒店：世界地理人文探索頻道》是一個從旅行經驗出發的PODCAST節目。我們不只分享旅行故事，更重要的是：透過旅行經驗去認識各地的地理、歷史、人文與社會議題。
+《旅行熱炒店：世界地理人文探索頻道》是一個從旅行經驗出發的PODCAST節目。我們不只分享旅行故事，更重要的是：透過旅行經驗去認識各地的地理、歷史、人文與社會議題。 >> [更多關於旅行熱炒店](/about) <<
+
+您可以透過下面的地圖尋找有興趣的內容，或從頁面下方連結依照地區尋找內容！
 
 {% assign regions = "Northeast Asia,Southeast Asia,South Asia,Central Asia,Oceania,Northern Europe,Western Europe,Central Europe,Eastern Europe,Southeastern Europe,Southern Europe,Caucasus,Middle East,North Africa,West Africa,East Africa,Southern Africa,US Northeast,US South,US Midwest,US West,Alaska,North America,Caribbean,Central America,South America" | split: "," %}
 {% include area-map.html regions=regions center="30,0" %}
@@ -34,7 +36,7 @@ actions:
   {% endfor %}
 </div>
 
-## 主題地圖
+<!-- ## 主題地圖
 
 <div class="entries-grid">
   {% assign latest_episodes = site.posts | where: "layout", "map" %}
@@ -50,4 +52,16 @@ actions:
   {% for post in latest_episodes %} 
     {% include entry.html %}
   {% endfor %}
-</div>
+</div> -->
+
+# 按地區瀏覽單集、地圖與旅行攻略
+
+<h1 style="text-align: center; padding: 24px 0; background: url('https://i.imgur.com/TyHKEk5.png') center / cover no-repeat;"><a href="/asia" style="color: white; text-decoration: none; display: block; width: 100%;">亞洲太平洋</a></h1>
+
+<h1 style="text-align: center; padding: 24px 0; background: url('https://i.imgur.com/V4p2j7a.png') center / cover no-repeat;"><a href="/europe" style="color: white; text-decoration: none; display: block; width: 100%;">歐洲西亞</a></h1>
+
+<h1 style="text-align: center; padding: 24px 0; background: url('https://i.imgur.com/I8HADSn.png') center / cover no-repeat;"><a href="/africa" style="color: white; text-decoration: none; display: block; width: 100%;">非洲</a></h1>
+
+<h1 style="text-align: center; padding: 24px 0; background: url('https://i.imgur.com/W8tsGzz.png') center / cover no-repeat;"><a href="/americas" style="color: white; text-decoration: none; display: block; width: 100%;">美洲</a></h1>
+
+<h1 style="text-align: center; padding: 24px 0; background: url('https://i.imgur.com/6TTweoe.png') center / cover no-repeat;"><a href="/maps" style="color: white; text-decoration: none; display: block; width: 100%;">地圖</a></h1>

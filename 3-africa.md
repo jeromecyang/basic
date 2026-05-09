@@ -2,6 +2,7 @@
 layout: page
 title: 非洲
 permalink: /africa/
+image: https://i.imgur.com/I8HADSn.png
 ---
 
 {% assign regions = "North Africa,West Africa,East Africa,Southern Africa" | split: "," %}
