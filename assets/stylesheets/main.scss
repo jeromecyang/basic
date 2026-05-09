@@ -3,20 +3,46 @@
 @import "basically-basic";
 
 .intro-image {
-  height: 400px;
+  max-height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   background: #dddddd;
-
-  // img {
-  //   max-width: 1200px;
-  // }
 }
 
 .intro-actions {
   >li {
-    margin-bottom: 4px;
+    margin-right: 4px;
+    margin-bottom: 8px;
+
+    a {
+      background: tomato;
+
+      &:hover {
+        background: tint(tomato, 20%);
+      }
+
+      &:focus {
+        background: shade(tomato, 20%);
+      }
+    }
+  }
+}
+
+.layout--map, .layout--episode {
+  .intro-image {
+    display: none;
+  }
+}
+
+.layout--home {
+  .intro {
+    padding: 4rem 0;
+    background: url('https://i.imgur.com/gYG4pwA.png') center / cover no-repeat;
+  }
+
+  .intro-title {
+    color: white;
   }
 }
