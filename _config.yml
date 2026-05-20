@@ -63,3 +63,4 @@ collections:
   - guests
 
 search: true
+future: true
