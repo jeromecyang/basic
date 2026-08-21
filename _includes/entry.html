@@ -20,7 +20,7 @@
         <div class="entry-meta"><span class="icon">{% include icon-calendar.svg %}</span><time class="entry-time" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></div>
       {% endif %}
       {% if post.excerpt %}
-        <div class="entry-excerpt">{{ post.excerpt }}</div>
+        <div class="entry-excerpt">{{ post.excerpt | strip_html }}</div>
       {% endif %}
     </div>
   </div>
