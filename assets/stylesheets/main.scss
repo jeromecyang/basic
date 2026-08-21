@@ -47,8 +47,20 @@
   }
 }
 
-.entries {
-  .entry {
-    padding-bottom: 0;
+.entry {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: none !important;
+
+  .entry-title {
+    margin-bottom: 0;
+  }
+
+  .entry-meta {
+    margin-bottom: 8px;
+  }
+
+  .entry-excerpt {
+    font-size: 0.9rem;
   }
 }
