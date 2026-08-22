@@ -9,7 +9,11 @@
     <div style="flex-shrink: 0; width: 120px">
       {% if post.image.thumbnail or post.image %}
         {% assign entry_image = post.image.thumbnail | default: post.image | relative_url | escape %}
-        <img src="{{ entry_image }}" alt="">
+        {% if entry_image contains 'imgur.com' %}
+          <img src="{{ entry_image | replace: '.png', 'b.png' | replace: '.jpg', 'b.jpg' }}" alt="">
+        {% else %}
+          <img src="{{ entry_image }}" alt="">
+        {% endif %}
       {% endif %}
     </div>
     <div>
