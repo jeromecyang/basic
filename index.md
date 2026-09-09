@@ -24,8 +24,7 @@ actions:
 
 # 地圖索引
 
-{% assign regions = "Northeast Asia,Southeast Asia,South Asia,Central Asia,Oceania,Northern Europe,Western Europe,Central Europe,Eastern Europe,Southeastern Europe,Southern Europe,Caucasus,Middle East,North Africa,West Africa,East Africa,Southern Africa,US Northeast,US South,US Midwest,US West,Alaska,North America,Caribbean,Central America,South America" | split: "," %}
-{% include area-map.html regions=regions center="30,0" %}
+{% include area-map.html %}
 
 # 最新單集
 
